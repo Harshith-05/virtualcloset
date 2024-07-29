@@ -8,35 +8,67 @@
 </head>
 <body>
     <h1>Virtual Closet</h1>
+
     <div id="auth-section">
-        <!-- Authentication Form -->
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button id="login">Login</button>
-        <button id="register">Register</button>
+        <div id="register-form">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Enter username" />
+            <input type="password" id="register-password" placeholder="Enter password" />
+            <button onclick="register()">Register</button>
+        </div>
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Enter username" />
+            <input type="password" id="login-password" placeholder="Enter password" />
+            <button onclick="login()">Login</button>
+        </div>
     </div>
-    <div id="upload-section">
-        <!-- File Upload Form -->
-        <input type="file" id="file-input">
-        <button id="capture-image">Capture Image</button>
-        <div id="preview"></div>
-        <select id="category">
-            <option value="kanjivaram_silk">Kanjivaram Silk</option>
-            <option value="tant">Tant</option>
-            <option value="bandhani">Bandhani</option>
-        </select>
-        <select id="color">
-            <option value="black">Black</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-        </select>
-        <button id="upload">Upload</button>
+
+    <div id="upload-section" style="display: none;">
+        <div class="file-or-camera">
+            <input type="file" accept="image/*" id="file-input" onchange="handleFileSelection(event)" />
+            <button onclick="startCamera()">Capture Image</button>
+        </div>
+        <video id="camera" style="display:none;" autoplay></video>
+        <button id="capture-button" style="display:none;" onclick="captureImage()">Capture</button>
+        <button id="switch-button" style="display:none;" onclick="switchCamera()">Switch Camera</button>
+        <div id="details-inputs" style="display: none;">
+            <select id="clothing-category">
+                <option value="">Select category</option>
+                <option value="Kanjivaram Silk">Kanjivaram Silk</option>
+                <option value="Banarasi">Banarasi</option>
+                <option value="Chikankari">Chikankari</option>
+                <option value="Bandhani">Bandhani</option>
+                <option value="Nauvari">Nauvari</option>
+                <option value="Tant">Tant</option>
+                <option value="Bomkai">Bomkai</option>
+                <option value="Chanderi">Chanderi</option>
+                <option value="Kasavu">Kasavu</option>
+                <option value="Muga">Muga</option>
+                <option value="Phulkari">Phulkari</option>
+            </select>
+            <select id="clothing-color">
+                <option value="">Select color</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Pink">Pink</option>
+                <option value="Purple">Purple</option>
+                <option value="Orange">Orange</option>
+                <option value="Brown">Brown</option>
+                <option value="Grey">Grey</option>
+            </select>
+            <div id="suggested-details" style="display: none;">
+                <p>Suggested category: <span id="suggestion-category"></span></p>
+                <p>Suggested color: <span id="suggestion-color"></span></p>
+            </div>
+            <button onclick="uploadImage()">Upload Image</button>
+        </div>
     </div>
-    <div id="camera-container">
-        <video id="camera" autoplay></video>
-        <button id="capture">Capture</button>
-        <button id="switch-camera">Switch Camera</button>
-    </div>
+
     <div id="closet"></div>
     <script src="script.js"></script>
 </body>
