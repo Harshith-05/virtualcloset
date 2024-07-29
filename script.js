@@ -174,12 +174,12 @@ function uploadImage() {
     itemContainer.className = 'item-container';
 
     const categoryElement = document.createElement('p');
-    categoryElement.textContent = Category: ${category};
+    categoryElement.textContent = `Category: ${category}`;
     categoryElement.classList.add('editable-category');
     categoryElement.setAttribute('data-index', -1);
 
     const colorElement = document.createElement('p');
-    colorElement.textContent = Color: ${color};
+    colorElement.textContent = `Color: ${color}`;
     colorElement.classList.add('editable-color');
     colorElement.setAttribute('data-index', -1);
 
@@ -223,12 +223,12 @@ function loadImages() {
             imageElement.src = image.imageData;
 
             const categoryElement = document.createElement('p');
-            categoryElement.textContent = Category: ${image.category};
+            categoryElement.textContent = `Category: ${image.category}`;
             categoryElement.classList.add('editable-category');
             categoryElement.setAttribute('data-index', index);
 
             const colorElement = document.createElement('p');
-            colorElement.textContent = Color: ${image.color};
+            colorElement.textContent = `Color: ${image.color}`;
             colorElement.classList.add('editable-color');
             colorElement.setAttribute('data-index', index);
 
@@ -303,7 +303,6 @@ function addEditableListeners() {
         });
     });
 }
-
 
 
 
