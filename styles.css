@@ -53,7 +53,7 @@ button:hover {
 #closet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
     gap: 10px;
     padding: 20px;
 }
@@ -68,12 +68,14 @@ button:hover {
     border-radius: 4px;
 }
 
-#closet img {
+.item-container img {
     width: 200px;
-    height: auto;
+    height: 200px;
+    object-fit: cover; /* Ensure images are cropped to fit within the specified dimensions */
     border-radius: 4px;
 }
 
 .item-container p {
     margin: 5px 0;
 }
+
