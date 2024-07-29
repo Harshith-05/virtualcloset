@@ -53,7 +53,7 @@ button:hover {
 #closet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;    
     gap: 10px;
     padding: 20px;
 }
@@ -68,12 +68,29 @@ button:hover {
     border-radius: 4px;
 }
 
-.item-container img {
+#closet img {
     width: 200px;
-    height: 200px;
-    object-fit: cover; /* Ensure images are cropped to fit within the specified dimensions */
+    height: auto;
     border-radius: 4px;
 }
+
+.item-container p {
+    margin: 5px 0;
+}
+
+.camera-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
 
 .item-container p {
     margin: 5px 0;
