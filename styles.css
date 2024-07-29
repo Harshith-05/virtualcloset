@@ -82,17 +82,12 @@ button:hover {
 #camera-container {
     position: relative;
     width: 100%;
-    padding-top: 75%; /* This makes the container's height 75% of its width */
-    overflow: hidden;
+    height: auto;
 }
 
 #camera {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -143,6 +138,35 @@ button:hover {
 
     #closet {
         gap: 5px;
+    }
+
+    #camera-container {
+        position: relative;
+        padding-top: 75%; /* Maintain aspect ratio */
+    }
+
+    #camera {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #capture, #switch-camera {
+        position: absolute;
+        bottom: 10px;
+        width: 48%;
+        margin: 0 1%;
+    }
+
+    #capture {
+        left: 1%;
+    }
+
+    #switch-camera {
+        right: 1%;
     }
 }
 
