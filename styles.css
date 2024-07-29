@@ -53,7 +53,7 @@ button:hover {
 #closet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
     gap: 10px;
     padding: 20px;
 }
@@ -68,12 +68,64 @@ button:hover {
     border-radius: 4px;
 }
 
-#closet img {
+.item-container img {
     width: 200px;
-    height: auto;
+    height: 200px;
+    object-fit: cover; /* Ensure images are cropped to fit within the specified dimensions */
     border-radius: 4px;
 }
 
 .item-container p {
     margin: 5px 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    #auth-section,
+    #upload-section {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #closet {
+        padding: 10px;
+    }
+
+    .item-container img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .item-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #closet {
+        gap: 5px;
+    }
 }
