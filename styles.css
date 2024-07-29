@@ -71,12 +71,28 @@ button:hover {
 .item-container img {
     width: 200px;
     height: 200px;
-    object-fit: cover; /* Ensure images are cropped to fit within the specified dimensions */
+    object-fit: cover;
     border-radius: 4px;
 }
 
 .item-container p {
     margin: 5px 0;
+}
+
+#camera-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* This makes the container's height 75% of its width */
+    overflow: hidden;
+}
+
+#camera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -129,3 +145,4 @@ button:hover {
         gap: 5px;
     }
 }
+
