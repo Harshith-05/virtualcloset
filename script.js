@@ -195,10 +195,16 @@ function uploadImage() {
     document.getElementById('file-input').value = '';
     document.getElementById('clothing-category').value = '';
     document.getElementById('clothing-color').value = '';
-    document.getElementById('preview-container').remove();
+    
+    const previewContainer = document.getElementById('preview-container');
+    if (previewContainer) {
+        previewContainer.remove();
+    }
+
     document.getElementById('details-inputs').style.display = 'none';
     document.getElementById('suggested-details').style.display = 'none';
 }
+
 
 function saveImage(imageData, category, color) {
     const currentUser = localStorage.getItem('currentUser');
