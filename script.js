@@ -174,12 +174,12 @@ function uploadImage() {
     itemContainer.className = 'item-container';
 
     const categoryElement = document.createElement('p');
-    categoryElement.textContent = `Category: ${category}`;
+    categoryElement.textContent = Category: ${category};
     categoryElement.classList.add('editable-category');
     categoryElement.setAttribute('data-index', -1);
 
     const colorElement = document.createElement('p');
-    colorElement.textContent = `Color: ${color}`;
+    colorElement.textContent = Color: ${color};
     colorElement.classList.add('editable-color');
     colorElement.setAttribute('data-index', -1);
 
@@ -195,16 +195,10 @@ function uploadImage() {
     document.getElementById('file-input').value = '';
     document.getElementById('clothing-category').value = '';
     document.getElementById('clothing-color').value = '';
-    
-    const previewContainer = document.getElementById('preview-container');
-    if (previewContainer) {
-        previewContainer.remove();
-    }
-
+    document.getElementById('preview-container').remove();
     document.getElementById('details-inputs').style.display = 'none';
     document.getElementById('suggested-details').style.display = 'none';
 }
-
 
 function saveImage(imageData, category, color) {
     const currentUser = localStorage.getItem('currentUser');
@@ -229,12 +223,12 @@ function loadImages() {
             imageElement.src = image.imageData;
 
             const categoryElement = document.createElement('p');
-            categoryElement.textContent = `Category: ${image.category}`;
+            categoryElement.textContent = Category: ${image.category};
             categoryElement.classList.add('editable-category');
             categoryElement.setAttribute('data-index', index);
 
             const colorElement = document.createElement('p');
-            colorElement.textContent = `Color: ${image.color}`;
+            colorElement.textContent = Color: ${image.color};
             colorElement.classList.add('editable-color');
             colorElement.setAttribute('data-index', index);
 
@@ -309,6 +303,7 @@ function addEditableListeners() {
         });
     });
 }
+
 
 
 
