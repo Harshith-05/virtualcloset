@@ -53,7 +53,7 @@ button:hover {
 #closet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;    
     gap: 10px;
     padding: 20px;
 }
@@ -68,105 +68,12 @@ button:hover {
     border-radius: 4px;
 }
 
-.item-container img {
+#closet img {
     width: 200px;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
     border-radius: 4px;
 }
 
 .item-container p {
     margin: 5px 0;
 }
-
-#camera-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-#camera {
-    width: 100%;
-    height: auto;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    #auth-section,
-    #upload-section {
-        width: 90%;
-    }
-
-    button {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    #closet {
-        padding: 10px;
-    }
-
-    .item-container img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    select {
-        width: calc(100% - 12px);
-        padding: 8px;
-        margin: 8px 0;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .item-container img {
-        width: 120px;
-        height: 120px;
-    }
-
-    #closet {
-        gap: 5px;
-    }
-
-    #camera-container {
-        position: relative;
-        padding-top: 75%; /* Maintain aspect ratio */
-    }
-
-    #camera {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #capture, #switch-camera {
-        position: absolute;
-        bottom: 10px;
-        width: 48%;
-        margin: 0 1%;
-    }
-
-    #capture {
-        left: 1%;
-    }
-
-    #switch-camera {
-        right: 1%;
-    }
-}
-
