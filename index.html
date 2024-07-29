@@ -29,9 +29,11 @@
             <input type="file" accept="image/*" id="file-input" onchange="handleFileSelection(event)" />
             <button onclick="startCamera()">Capture Image</button>
         </div>
-        <video id="camera" style="display:none;" autoplay></video>
-        <button id="capture-button" style="display:none;" onclick="captureImage()">Capture</button>
-        <button id="switch-button" style="display:none;" onclick="switchCamera()">Switch Camera</button>
+        <div id="camera-container" class="camera-container" style="display:none;">
+            <video id="camera" autoplay></video>
+            <button id="capture-button" onclick="captureImage()">Capture</button>
+            <button id="switch-button" onclick="switchCamera()">Switch Camera</button>
+        </div>
         <div id="details-inputs" style="display: none;">
             <select id="clothing-category">
                 <option value="">Select category</option>
@@ -73,6 +75,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
