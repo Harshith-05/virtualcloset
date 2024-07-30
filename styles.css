@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    background-color: #4CAF50;
+    background-color: #3498e0;
     color: white;
     padding: 10px 0;
 }
@@ -39,7 +39,7 @@ button {
     margin: 10px 5px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
+    background-color: #159aff;
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2983de;
 }
 
 #closet {
